@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeLoveDogs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-logo"><a href="index.html">we<span>love</span>dogs</a></div>
+        <ul>
+            <li><a href="quem-somos.html">QUEM SOMOS</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+            <li><a href="inscrever.html" class="btn-inscrever">INSCREVER</a></li>
+
+        </ul>
+    </nav>
+    <section class="inscricao">
+        <h1 class="inscrever-titulo">Inscrição</h1>
+        <div class="form-conteudo">
+            <form>
+                <div class="form-campo">
+                    <label>Nome</label>
+                    <input type="text" placeholder="Seu nome" required>
+                </div>
+                <div class="form-campo">
+                    <label>Idade</label>
+                    <input type="number" placeholder="18" required>
+                </div>
+                <div class="form-campo">
+                    <label>E-mail</label>
+                    <input type="email" placeholder="exemplo@exemplo" required>
+                </div>
+                <div class="form-campo">
+                    <label>Ama cachorros?</label>
+                    <textarea placeholder="Mensagem" required></textarea>
+                </div>
+                <button type="submit" class="btn-enviar" id="btn-enviar">Enviar</button>
+                <div id="mensagem-sucesso" style="display: none; color: green; margin-top: 10px">Inscrição enviada com sucesso!</div>
+
+            </form>
+            <img src="Figure5.svg" alt="pessoa-coracao" class="inscrever-imagem">
+        </div>
+
+    </section>
+
+    <script>
+    document.getElementById('btn-enviar').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('mensagem-sucesso').style.display = 'block';
+    }); 
+    </script>
+</body>
+</html>
