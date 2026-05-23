@@ -9,7 +9,9 @@
 <body>
     <nav>
         <div class="nav-logo"><a href="index.html">we<span>love</span>dogs</a></div>
-        <ul>
+        <button class="hamburguer" onclick="toggleMenu()">☰</button>
+        <ul class="nav-menu">
+            <button id="btn-dark" onclick="toggleDark()">Modo escuro</button>
             <li><a href="quem-somos.html">QUEM SOMOS</a></li>
             <li><a href="blog.html">BLOG</a></li>
             <li><a href="inscrever.html" class="btn-inscrever">INSCREVER</a></li>
@@ -34,5 +36,7 @@
         </div>
 
     </section>
+    <script src="script.js"></script>
+    <script src="darkmode.js"></script>
 </body>
 </html>

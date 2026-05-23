@@ -9,12 +9,15 @@
 <body>
     <nav>
         <div class="nav-logo"><a href="index.html">we<span>love</span>dogs</a></div>
-        <ul>
+        <button class="hamburguer" onclick="toggleMenu()">☰</button>
+        
+        <ul class="nav-menu">
+            <li><button id="btn-dark" onclick="toggleDark()">Modo escuro</button></li>
             <li><a href="quem-somos.html">QUEM SOMOS</a></li>
             <li><a href="blog.html">BLOG</a></li>
             <li><a href="inscrever.html" class="btn-inscrever">INSCREVER</a></li>
-
         </ul>
+        
     </nav>
     <section class="inscricao">
         <h1 class="inscrever-titulo">Inscrição</h1>
@@ -22,34 +25,42 @@
             <form>
                 <div class="form-campo">
                     <label>Nome</label>
-                    <input type="text" placeholder="Seu nome" required>
+                    <div class="input-wrapper">
+                        <input type="text" placeholder="Seu nome">
+                        <span class="erro">Preencha o nome</span>
+                    </div>
                 </div>
                 <div class="form-campo">
                     <label>Idade</label>
-                    <input type="number" placeholder="18" required>
+                    <div class="input-wrapper">
+                        <input type="number" placeholder="18">
+                        <span class="erro" id="erro-idade-vazio">Preencha a idade</span>
+                        <span class="erro" id="erro-idade-minima">Idade deve ser acima de 14 anos</span>
+                    </div>
                 </div>
                 <div class="form-campo">
                     <label>E-mail</label>
-                    <input type="email" placeholder="exemplo@exemplo" required>
+                    <div class="input-wrapper">
+                        <input type="email" placeholder="exemplo@exemplo">
+                        <span class="erro">E-mail inválido</span>
+                    </div>
                 </div>
                 <div class="form-campo">
                     <label>Ama cachorros?</label>
-                    <textarea placeholder="Mensagem" required></textarea>
+                    <div class="input-wrapper">
+                        <textarea placeholder="Mensagem"></textarea>
+                        <span class="erro">Preencha a mensagem</span>
+                    </div>
                 </div>
                 <button type="submit" class="btn-enviar" id="btn-enviar">Enviar</button>
                 <div id="mensagem-sucesso" style="display: none; color: green; margin-top: 10px">Inscrição enviada com sucesso!</div>
-
             </form>
             <img src="Figure5.svg" alt="pessoa-coracao" class="inscrever-imagem">
         </div>
 
     </section>
 
-    <script>
-    document.getElementById('btn-enviar').addEventListener('click', function(event) {
-        event.preventDefault();
-        document.getElementById('mensagem-sucesso').style.display = 'block';
-    }); 
-    </script>
+    <script src="script.js"></script>
+    <script src="darkmode.js"></script>
 </body>
 </html>
